@@ -35,8 +35,7 @@ def one_hot_encode(y, n_classes=10):
     # Create a matrix of 0s with as many lines as y and 10 columns
     encoded = np.zeros((y.shape[0], n_classes))
     # For each line of the matrix, set the column y[i] to 1
-    for i in range(y.shape[0]):
-        encoded[i][y[i]] = 1
+    encoded[np.arange(y.shape[0]), y] = 1
     return encoded
 
 
