@@ -3,4 +3,4 @@ venv
 .DS_Store
 data
 .vscode
-algo
+.env
