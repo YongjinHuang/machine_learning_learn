@@ -25,6 +25,17 @@ class Graph:
             print(" \n")
 
 
+class UndirectedGraph(Graph):
+    def add_edge(self, source, destination):
+        node = AdjNode(destination)
+        node.next = self.graph[source]
+        self.graph[source] = node
+
+        node = AdjNode(source)
+        node.next = self.graph[destination]
+        self.graph[destination] = node
+
+
 if __name__ == "__main__":
     g = Graph(5)
     g.add_edge(0, 1)
