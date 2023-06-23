@@ -67,8 +67,8 @@ def report(iteration, x, y, x_test, y_test, w):
 if __name__ == '__main__':
     # Prepend a column of 1s to the matrix of inputs
     # Load the images and labels from the mnist dataset
-    y = mnist.one_hot_encode(mnist.load_labels('../../data/mnist/train-labels-idx1-ubyte.gz'), n_classes=10)
     x = mnist.prepend_bias(mnist.load_images('../../data/mnist/train-images-idx3-ubyte.gz'))
+    y = mnist.one_hot_encode(mnist.load_labels('../../data/mnist/train-labels-idx1-ubyte.gz'), n_classes=10)
     x_test = mnist.prepend_bias(mnist.load_images('../../data/mnist/t10k-images-idx3-ubyte.gz'))
     y_test = mnist.load_labels('../../data/mnist/t10k-labels-idx1-ubyte.gz')
     # Train the model

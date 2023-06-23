@@ -1,4 +1,4 @@
-from algo.stack.stack import Stack
+from dt.stack.stack import Stack
 
 
 def reverse_string(input_str):
